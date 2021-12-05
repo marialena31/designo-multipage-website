@@ -1,0 +1,56 @@
+@import "../../sass/variables";
+
+.form {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: $font-weight-medium;
+    line-height: $font-line-height-body;
+
+    .text-input {
+        border-bottom: $white-border-thin;
+        padding-left: 1.1em;
+        
+        &::placeholder {
+            color: $white-color;
+            opacity: 0.5;
+            vertical-align: top;
+
+            &:active {
+                opacity: 0;
+            }
+        }
+
+        &:active {
+            border-bottom: $white-border-large;
+        }
+    }
+
+    .text-area {
+        border-bottom: $white-border-thin;
+        padding-left: 1.1em;
+
+        ::placeholder {
+            color: $white-color;
+            opacity: 0.5;
+            vertical-align: top;
+
+            &:active {
+                opacity: 0;
+            }
+        }
+
+        &:active {
+            border-bottom: $white-border-large;
+        }
+    }
+
+    .error {
+        color: $white-color;
+        font-size: 12px;
+        font-style: italic;
+        & span {
+            margin-left: 0.6em;
+        }
+    }
+}

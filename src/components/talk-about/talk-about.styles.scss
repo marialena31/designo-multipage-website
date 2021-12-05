@@ -1,0 +1,42 @@
+@import "../../sass/variables";
+
+.talk-about {
+    position: absolute;
+    left: calc((100vw - 111.1rem)/2);
+    bottom: 32.1rem;
+    width: 111.1rem;
+    height: 29.2rem;
+    margin: auto;
+    border-radius: 15px;
+    background-image: url('../../assets/shared/desktop/bg-pattern-call-to-action.svg');
+    background-position: center;
+    background-color: $peach-color;
+    z-index: 2;
+    padding-top: 7.2rem;
+    padding-left: 9.5rem;
+    padding-right: 9.5rem;
+    padding-bottom: 4.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    text-align: left;
+    color: $white-color;
+
+    &__text {
+        width: 46rem;
+        
+        &__title {
+            height: 9.6rem;
+            font-size: $font-heading-2;
+            line-height: $font-line-height-heading-2;
+            font-weight: $font-weight-medium;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__info {
+            justify-self: flex-end;
+        }
+    }
+}
