@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, useField, useFormik } from 'formik';
+import { useField, useFormik } from 'formik';
 import ButtonOnDark from "../button-on-dark/button-on-dark.component";
 import { ReactComponent as IconError } from '../../assets/contact/desktop/icon-error.svg'
 
@@ -37,18 +37,18 @@ const MyTextInput = ({ label, ...props }) => {
     );
   };  
 
-  // const MyTextArea = ({ label, ...props }) => {
-  //   const [field, meta] = useField(props);
-  //   return (
-  //     <>
-  //       <label htmlFor={props.id || props.name}/>
-  //       <input className="text-area" {...field} {...props} />
-  //       {meta.touched && meta.error ? (
-  //         <div className="error">{meta.error}</div>
-  //       ) : null}
-  //     </>
-  //   );
-  // };  
+  const MyTextArea = ({ label, ...props }) => {
+    const [field, meta] = useField(props);
+    return (
+      <>
+        <label htmlFor={props.id || props.name}/>
+        <input className="text-area" {...field} {...props} />
+        {meta.touched && meta.error ? (
+          <div className="error">{meta.error}</div>
+        ) : null}
+      </>
+    );
+  };  
 
 const ContactForm = () => {
     const formik = useFormik({
@@ -81,11 +81,11 @@ const ContactForm = () => {
                 type="text"
                 placeholder="Phone"
             />
-            {/* <MyTextArea
+            <MyTextArea
                 name="name"
                 type="textarea"
                 placeholder="Message"
-            /> */}
+            />
             <ButtonOnDark value="Submit"/>
         </form>
     )

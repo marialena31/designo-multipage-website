@@ -6,7 +6,7 @@ import './link-card.styles.scss'
 
 const LinkCard = ({data, className = ''}) => {
     const getUrlMedia = (img) => {
-        return getBaseUrlMedia() +'/'+ 'home' +'/'+ 'desktop' +'/'+ img
+        return getBaseUrlMedia().concat('/','home','/','desktop','/',img)
     }
     return (
         <Link to={`/${data.link}`} className={`link-card__link ${className}`}>

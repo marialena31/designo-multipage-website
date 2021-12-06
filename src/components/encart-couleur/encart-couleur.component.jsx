@@ -2,15 +2,17 @@ import React from "react";
 import { useHistory } from 'react-router-dom';
 import ButtonOnDark from "../button-on-dark/button-on-dark.component";
 import { getBaseUrlMedia } from "../../utils /utils";
-import ContactForm from "../contact-form/contact-form.component";
+// import ContactForm from "../contact-form/contact-form.component";
 
 import './encart-couleur.styles.scss'
 
 const EncartCouleur = ({data}) => {
     const history = useHistory();
 
+    const page = ((data.page === "talk-about") ? 'shared' : data.page)
+
     const getUrlMedia = (img) => {
-        return getBaseUrlMedia() +'/'+ ((data.page === "talk-about") ? 'shared' : data.page)  +'/'+ 'desktop' +'/'+ img
+        return getBaseUrlMedia().concat('/',page,'/','desktop','/',img)
     }
 
     const classNameSupp = data.image && data.buttonTitle ? "big-height" : (data.image || data.form)  && !data.buttonTitle ? "middle-height" : ""
