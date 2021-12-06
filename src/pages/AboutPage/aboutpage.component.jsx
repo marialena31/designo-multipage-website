@@ -9,7 +9,7 @@ import EntetePage from "../../components/entete-page/entete-page.component";
 
 const AboutPage = () => {
     return (
-        <div className="page">
+        <div className="page bck-img">
             <Header />
             <EntetePage/>
             <TalkAbout />

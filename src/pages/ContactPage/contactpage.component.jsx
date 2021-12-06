@@ -8,7 +8,7 @@ import EntetePage from "../../components/entete-page/entete-page.component";
 
 const ContactPage = () => {
     return (
-        <div className="page">
+        <div className="page bck-img contact">
             <Header />
             <EntetePage/>
             <Footer />

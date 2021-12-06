@@ -8,11 +8,11 @@ import TalkAbout from "../../components/talk-about/talk-about.component";
 import EntetePage from "../../components/entete-page/entete-page.component";
 import { LinkCardBlocAppGraph } from "../../components/link-card-bloc/link-card-bloc.component"
 
-const WebDesignPage = ({currentPage, setCurrentPage}) => {
+const WebDesignPage = () => {
     return (
-        <div className="page">
+        <div className="page bck-img">
             <Header />
-            <EntetePage currentPage={currentPage}/>
+            <EntetePage />
             <LinkCardBlocAppGraph/>
             <TalkAbout />
             <Footer />

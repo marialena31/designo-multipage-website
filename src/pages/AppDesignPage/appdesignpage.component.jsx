@@ -10,7 +10,7 @@ import { LinkCardBlocWebGraph } from "../../components/link-card-bloc/link-card-
 
 const AppDesignPage = () => {
     return (
-        <div className="page">
+        <div className="page bck-img">
             <Header />
             <EntetePage/>
             <LinkCardBlocWebGraph/>

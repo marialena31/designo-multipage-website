@@ -1,16 +1,14 @@
 @import "../../sass/variables";
 
-.header {
+.header  {
     height: 15.5rem;
-    padding-left: 16.5rem;
-    padding-right: 16.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     &__logo {
         height: 2.4rem;
         width: 19.6rem;
+        margin-right: 54.5rem;
 
         &__img {
             width: 100%;

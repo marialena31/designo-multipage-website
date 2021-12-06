@@ -10,7 +10,7 @@ import { LinkCardBlocAppWeb } from "../../components/link-card-bloc/link-card-bl
 
 const GraphicDesignPage = () => {
     return (
-        <div className="page">
+        <div className="page bck-img">
             <Header />
             <EntetePage/>
             <LinkCardBlocAppWeb/>
