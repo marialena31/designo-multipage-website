@@ -1,9 +1,9 @@
 import React from "react";
-import { Form, useField } from 'formik';
+import { Form, useField, useFormik } from 'formik';
 import ButtonOnDark from "../button-on-dark/button-on-dark.component";
-import {IconError as ReactComponent} from '../../assets/contact/desktop/icon-error.svg'
+import { ReactComponent as IconError } from '../../assets/contact/desktop/icon-error.svg'
 
-import './form.styles.scss'
+import './contact-form.styles.scss'
 
 const validate = values => {
     const errors = {};
@@ -37,20 +37,20 @@ const MyTextInput = ({ label, ...props }) => {
     );
   };  
 
-  const MyTextArea = ({ label, ...props }) => {
-    const [field, meta] = useField(props);
-    return (
-      <>
-        <label htmlFor={props.id || props.name}/>
-        <input className="text-area" {...field} {...props} />
-        {meta.touched && meta.error ? (
-          <div className="error">{meta.error}</div>
-        ) : null}
-      </>
-    );
-  };  
+  // const MyTextArea = ({ label, ...props }) => {
+  //   const [field, meta] = useField(props);
+  //   return (
+  //     <>
+  //       <label htmlFor={props.id || props.name}/>
+  //       <input className="text-area" {...field} {...props} />
+  //       {meta.touched && meta.error ? (
+  //         <div className="error">{meta.error}</div>
+  //       ) : null}
+  //     </>
+  //   );
+  // };  
 
-const Form = () => {
+const ContactForm = () => {
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -81,14 +81,14 @@ const Form = () => {
                 type="text"
                 placeholder="Phone"
             />
-            <MyTextArea
+            {/* <MyTextArea
                 name="name"
                 type="textarea"
                 placeholder="Message"
-            />
+            /> */}
             <ButtonOnDark value="Submit"/>
         </form>
     )
 }
 
-export default Form;
+export default ContactForm;

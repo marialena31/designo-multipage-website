@@ -1,4 +1,10 @@
-.App {
-  text-align: center;
+.page {
+    display: flex;
+    flex-direction: column;
 }
 
+.bck-img {
+    background-image: url("./assets/shared/desktop/bg-pattern-leaf.svg");
+    background-position: left top 281px;
+    background-repeat: no-repeat;
+}

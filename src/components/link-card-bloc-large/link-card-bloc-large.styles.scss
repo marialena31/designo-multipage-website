@@ -1,0 +1,15 @@
+@import "../../sass/main";
+
+.link-card-bloc-large  {
+    margin-top: 27.4rem;
+    margin-bottom: 16rem;
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+    display: flex;
+
+    &__col {
+        margin-left: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+}

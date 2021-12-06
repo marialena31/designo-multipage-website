@@ -21,7 +21,6 @@ const Footer = () => {
                 </Link>
                 <Navigation />
             </div>
-            <div className="footer__interline"></div>
             <div className="footer__secondline">
                 <div className="footer__secondline__address">
                     <span className="footer__secondline__address__name">Designo Central Office</span>
