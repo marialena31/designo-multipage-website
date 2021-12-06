@@ -9,7 +9,7 @@ import EncartCouleur from "../../components/encart-couleur/encart-couleur.compon
 function withData(EncartCouleur, selectData) {
     return function (props) {
         const location = useLocation()
-        const currentPage = location.pathname.substring(1)
+        const currentPage = location.pathname === '/' ? 'home' : location.pathname.substring(1)
 
         const datas = selectData(getPageEnteteInfos)
         const pageDatas = datas.filter(data => data.page === currentPage)
