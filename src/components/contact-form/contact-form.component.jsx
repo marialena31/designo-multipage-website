@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Field, Form, useField, ErrorMessage } from 'formik';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from "yup";
 import ButtonOnDark from "../button-on-dark/button-on-dark.component";
 import { ReactComponent as IconError } from '../../assets/contact/desktop/icon-error.svg'
@@ -7,13 +7,13 @@ import { ReactComponent as IconError } from '../../assets/contact/desktop/icon-e
 import './contact-form.styles.scss'
 
 const SignInSchema = Yup.object().shape({
-  name: Yup.string().required("Can\'t be empty"),
-  email: Yup.string().required("Can\'t be empty").matches(
+  name: Yup.string().required("Can't be empty"),
+  email: Yup.string().required("Can't be empty").matches(
     /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
           "Please use a valid email address"
         ),
 
-  message: Yup.string().required("Can\'t be empty")
+  message: Yup.string().required("Can't be empty")
 });
 
 const ContactForm = () => {
@@ -34,7 +34,7 @@ const ContactForm = () => {
           }}
          >
          {(formik) => {
-          const { errors, touched, isValid, dirty } = formik;
+          const { errors, touched } = formik;
           return (
             <Form className="contact-form" novalidate>
               <label htmlFor="name"></label>

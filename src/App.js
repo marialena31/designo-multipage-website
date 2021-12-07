@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, useLocation } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import HomePage from './pages/HomePage/homepage.component';
 import WebDesignPage from './pages/WebDesignPage/webdesignpage.component';
