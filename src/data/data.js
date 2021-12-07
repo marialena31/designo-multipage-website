@@ -316,7 +316,8 @@ export const dataTownInfos = [
         imageBackground: "bg-pattern-two-circles.svg",
         imgBckDir: "shared",
         map: "image-map-canada.png",
-        mapDir: "locations"
+        mapDir: "locations",
+        latLng: [43.644260839418486, -79.39452867327853]
     },
     {
         name : "Australia",
@@ -328,21 +329,23 @@ export const dataTownInfos = [
         imageBackground: "bg-pattern-two-circles.svg",
         imgBckDir: "shared",
         map: "image-map-australia.png",
-        mapDir: "locations"
+        mapDir: "locations",
+        latLng: [-30.32920401212297, 149.7882828140032]
     },
     {
         name : "United Kingdom",
         title: "Designo UK Office",
-        street: "13 Colorado Way",
+        street: "17 Commercial Rd",
         town: "Rhyd-y-fro SA8 9GA",
         tel: "P : 078 3115 1400",
         mail: "M : contact@designo.uk",
         imageBackground: "bg-pattern-two-circles.svg",
         imgBckDir: "shared",
         map: "image-map-united-kingdom.png",
-        mapDir: "locations"
+        mapDir: "locations",
+        latLng: [51.73232350410524, -3.8629538798399765]
     },
-]
+] 
 
 function getPageEnteteInfos() {
     return {enteteInfos};

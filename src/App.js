@@ -13,23 +13,16 @@ import './App.css';
 import './sass/main.scss';
 
 function App() {
-  const location = useLocation()
-  const [currentPage, setCurrentPage] = React.useState(() => 
-                                              location.pathname === '/' ? 
-                                                'home' : 
-                                                location.pathname
-                                            )
-
   return (
     <div className="App">
       <Switch>
-        <Route exact path='/' render={(props) => (<HomePage {...props} currentPage={currentPage} setCurrentPage={setCurrentPage}/>)} />
-        <Route path='/web-design' render={(props) => (<WebDesignPage {...props} currentPage={currentPage} setCurrentPage={setCurrentPage}/>)} />
-        <Route path='/app-design' render={(props) => (<AppDesignPage {...props} currentPage={currentPage} setCurrentPage={setCurrentPage}/>)} />
-        <Route path='/graphic-design' render={(props) => (<GraphicDesignPage {...props} currentPage={currentPage} setCurrentPage={setCurrentPage}/>)} />
-        <Route path='/about' render={(props) => (<AboutPage {...props} currentPage={currentPage} setCurrentPage={setCurrentPage}/>)} />
-        <Route path='/locations' render={(props) => (<LocationsPage {...props} currentPage={currentPage} setCurrentPage={setCurrentPage}/>)} />
-        <Route path='/contact' render={(props) => (<ContactPage {...props} currentPage={currentPage} setCurrentPage={setCurrentPage}/>)} />
+        <Route exact path='/' render={(props) => (<HomePage {...props} />)} />
+        <Route path='/web-design' render={(props) => (<WebDesignPage {...props} />)} />
+        <Route path='/app-design' render={(props) => (<AppDesignPage {...props} />)} />
+        <Route path='/graphic-design' render={(props) => (<GraphicDesignPage {...props} />)} />
+        <Route path='/about' render={(props) => (<AboutPage {...props} />)} />
+        <Route path='/locations' render={(props) => (<LocationsPage {...props} />)} />
+        <Route path='/contact' render={(props) => (<ContactPage {...props} />)} />
       </Switch>
     </div>
   );

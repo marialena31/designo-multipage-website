@@ -11,7 +11,7 @@ import QualitiesBloc from "../../components/qualilties-bloc/qualities-bloc.compo
 
 const HomePage = () => {
     return (
-        <div className="page bck-img home bottom">
+        <div className="page bck-img home">
             <Header />
             <EntetePage/>
             <LinkCardBlocLarge/>

@@ -3,7 +3,7 @@ import React from "react";
 import './town-card.styles.scss'
 
 import { getBaseUrlMedia } from "../../utils /utils";
-
+import CustomMap from "../../components/custom-map/custom-map.component"
 
 const TownCard = ({data, className = ''}) => {
     const getUrlMedia = (img, dir) => {
@@ -28,7 +28,9 @@ const TownCard = ({data, className = ''}) => {
                     </div>
                 </div>
             </div>
-            <div className={`town-card__map ${className}`} style={{backgroundImage: `url(${getUrlMedia(data.map, data.mapDir)})`}}></div>
+            <div className={`town-card__map ${className}`}>
+                <CustomMap latLng={data.latLng} popup={data.title}/>
+            </div>
         </div>
     )
 }
