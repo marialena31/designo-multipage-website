@@ -12,10 +12,10 @@ import {ReactComponent as InstagramIcon} from '../../assets/shared/desktop/icon-
 
 import './footer.styles.scss'
 
-const Footer = () => {
+const Footer = ({className}) => {
     return (
-        <footer className="footer">
-            <div className="footer__content">
+        <footer className={`footer ${className}`}>
+            <div className={`footer__content ${className}`}>
                 <div className="footer__content__firstline">
                     <Link className="footer__content__firstline__logo" to='/'>
                         <img src={Logo} className="footer__content__firstline__logo__img" alt="logo"/>

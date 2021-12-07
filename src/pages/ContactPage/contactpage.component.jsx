@@ -5,13 +5,15 @@ import Footer from "../../components/footer/footer.component";
 
 import './contactpage.styles.scss'
 import EntetePage from "../../components/entete-page/entete-page.component";
+import LocationsBloc from "../../components/locations-bloc /locations-bloc.component";
 
 const ContactPage = () => {
     return (
         <div className="page bck-img contact">
             <Header />
             <EntetePage/>
-            <Footer />
+            <LocationsBloc/>
+            <Footer className="contact"/>
         </div>
     )
 }
